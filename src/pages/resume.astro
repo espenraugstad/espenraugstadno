@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import CVWork from "../components/CVWork.astro";
+import CVEducation from "../components/CVEducation.astro";
+import workData from "../data/work.json";
+import educationData from "../data/education.json";
+---
+
+<Layout>
+    <Nav active="resume" />
+    <main class="max-w-4xl mx-auto p-4 md:p-8">
+        <h1 class="text-4xl font-extrabold mb-4">CV Espen Raugstad</h1>
+        <p class="flex items-center gap-2"></p>
+        <ul class="flex flex-col gap-2 mb-8">
+            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7m0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5"/></svg> <span class="font-bold">Kristiansand</span></li>
+            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"/></svg> <a href="mailto:espen.raugstad@gmail.com"> espen.raugstad@gmail.com </a></li>
+            <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3m-2 20h-4v-1h4zm3.25-3H6.75V4h10.5z"/></svg> 959 06 893</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold mb-4">Arbeidserfaring</h2>
+        <div class="flex flex-col gap-4 mb-8">
+            {workData.map((job) => (
+                <CVWork 
+                    startDate={job.startDate} 
+                    endDate={job.endDate} 
+                    jobTitle={job.jobTitle} 
+                    placeOfWork={job.placeOfWork} 
+                    description={job.description} 
+                />
+            ))}
+        </div>
+
+        <h2 class="text-2xl font-bold mb-4">Utdanning</h2>
+        <div class="flex flex-col gap-4">
+            {educationData.map((edu) => (
+                <CVEducation 
+                    startDate={edu.startDate} 
+                    endDate={edu.endDate} 
+                    study={edu.study} 
+                    institution={edu.institution} 
+                    description={edu.description} 
+                />
+            ))}
+        </div>
+    </main>
+</Layout>

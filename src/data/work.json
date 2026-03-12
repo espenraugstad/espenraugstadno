@@ -1,0 +1,51 @@
+[
+  {
+    "startDate": "01/2026",
+    "endDate": "06/2026",
+    "jobTitle": "Universitetslektor (deltid)",
+    "placeOfWork": "Universitetet i Agder",
+    "description": "Bidrar med undervisning og emneplanlegging i emnet E-Teaching II - Learning platforms and tool på master i multimedia og spillteknologi. Undersviser om blant annet universal design og læringsplattformer."
+  },
+  {
+    "startDate": "07/2024",
+    "endDate": "12/2025",
+    "jobTitle": "Rådgiver",
+    "placeOfWork": "Universitetet i Agder",
+    "description": "Jobbet med læringsdesign og administrasjon knyttet til læringsplattformen Canvas. Utviklet ulike designløsninger ved hjelp av et integrert verktøy, samt manuell HTML og CSS (delvis basert på Tailwind). Høyt fokus på brukervennlighet og tilgjengelighet, samt å få et konsistent design på tvers av plattformer (app og nettside). Utviklet også flere skript for automatisering av ulike prosesser ved hjelp av API-et til Canvas. Mye tverrfaglig samarbeid, og var også en del av å utvikle en ny prosess for læringsdesign."
+  },
+  {
+    "startDate": "01/2021",
+    "endDate": "12/2023",
+    "jobTitle": "Studentmentor",
+    "placeOfWork": "Universitetet i Agder",
+    "description": "Flere oppdrag som studentmentor i perioden. En-til-en hjelp av studenter i emner som handlet om fullstack applikasjonsutvikling. Jobbet med HTML/CSS/Javascript frontend, samt Node, Express, og Postgres på backend."
+  },
+  {
+    "startDate": "08/2021",
+    "endDate": "12/2021",
+    "jobTitle": "Læringsassistent apputvikling",
+    "placeOfWork": "Universitetet i Agder",
+    "description": "Læringsassistent i applikasjonsutvikling for multimediestudenter med fokus på fullstack utvikling. Jobben bestod i veiledning innen HTML/CSS/Javascript samt Node, Express og Postgres, og godkjenning av studentoppgaver."
+  },
+  {
+    "startDate": "08/2020",
+    "endDate": "01/2021",
+    "jobTitle": "FYSE Coach og linjeleder",
+    "placeOfWork": "Universitetet i Agder",
+    "description": "FYSE (First Year Student Environment) er et program ved fakultet for teknologi og realfag som skal hjelpe førsteårsstudenter i gang med studenttilværelsen. Jobben bestod i gruppeveiledning av studenter for å svare på spørsmål og hjelpe med motivasjonen til å delta på forelesninger. Som linjeleder var det også jevnlige møter med de andre coachene på studieprogrammet, samt møter med prosjektleder og coacher fra andre studieprogram."
+  },
+  {
+    "startDate": "01/2019",
+    "endDate": "06/2019",
+    "jobTitle": "Læringsassistent fysikk",
+    "placeOfWork": "Universitetet i Agder",
+    "description": "Læringsassistent i fysikk for studieprogrammene data, elektronikk og fornybar energi. Jobbet primært med å hjelpe studenter med oppgaver på gruppetimer og godkjenne innleveringer."
+  },
+  {
+    "startDate": "08/2009",
+    "endDate": "07/2018",
+    "jobTitle": "Lektor med opprykk",
+    "placeOfWork": "Dalane videregående skole",
+    "description": "Fulltidsstilling med undervisning i matematikk (programfagene R1 og R2 og fellesfagene), fysikk 1og 2, samt noe naturfag. Kontaktlærer de første årene. Ansvar for fysikklaboratorium og innkjøp av utstyr."
+  }
+]

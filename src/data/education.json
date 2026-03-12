@@ -1,0 +1,44 @@
+[
+  {
+    "startDate": "08/2021",
+    "endDate": "06/2023",
+    "study": "Mastergrad i multimedia og læringsteknologi",
+    "institution": "Universitetet i Agder, Grimstad",
+    "description": "Lærte blant annet om e-læring, pedagogikk, interaksjonsdesign og brukertesting (UI/UX, verktøy som Figma), spill og læring, utvikling av VR/AR og spill i Unity med C#. Utviklet prototype av et digitalt presentasjonsverktøy med JS/Node/Express som en del av masteroppgaven."
+  },
+  {
+    "startDate": "08/2018",
+    "endDate": "06/2023",
+    "study": "Bachelorgrad i multimedieteknologi og -design",
+    "institution": "Universitetet i Agder, Grimstad",
+    "description": "Lærte om et bredt utvalg av multimedia og teknologi, inkludert foto, video, lyd, grafisk design, utstrakt bruk av programmer i Adobepakken, programmering (JavaScript), databaser, webpublisering, applikasjonsutvikling med JavaScript, Node, Express og Postgres, og 3D modellering. Jobbet blant annet med React på deler av bacheloroppgaven."
+  },
+  {
+    "startDate": "08/2016",
+    "endDate": "06/2018",
+    "study": "Naturfag 1 og 2",
+    "institution": "Universitetet i Tromsø og NTNU",
+    "description": "Videreutdanning for lærere (kompetanse for kvalitet). Utvalgte tema fra fysikk, biologi og kjemi, samt didaktikk."
+  },
+  {
+    "startDate": "08/2008",
+    "endDate": "06/2009",
+    "study": "Praktisk-pedagogisk utdanning (PPU)",
+    "institution": "Universitetet i Bergen",
+    "description": "Pedagogikk og didaktikk med vekt på matematikk, naturfag og fysikk. Praksis i ungdomsskole og videregående skole."
+  },
+  {
+    "startDate": "08/2006",
+    "endDate": "06/2008",
+    "study": "Mastergrad i teoretisk fysikk",
+    "institution": "Universitetet i Oslo",
+    "description": "Ulike temaer innen klassisk og moderne fysikk. Fokus på astrofysikk, kosmologi og teoretisk fysikk på masteroppgaven. Utstrakt bruk av programmering til ulike formål, inkludert Java, C++, Fortran og MATLAB."
+  },
+  {
+    "startDate": "08/2002",
+    "endDate": "06/2006",
+    "study": "Bachelorgrad i fysikk",
+    "institution": "Universitetet i Oslo",
+    "description": "Emner innen klassisk og moderne fysikk som mekanikk, elektromagnetisme, termofysikk, kvantefysikk og astrofysikk i tillegg til matematikk og informatikk med fokus på Java og MATLAB."
+  }
+]

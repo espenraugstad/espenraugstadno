@@ -1,0 +1,14 @@
+---
+title: "KI Oversetter"
+description: "Oversetting av sider i læringsplattformen Canvas til engelsk ved hjelp av KI."
+technologies: ["JavaScript", "Node", "Express", "Canvas LMS API", "Tampermonkey", "KI"]
+featuredImage: "../../assets/project_screenshots/ai_translator.png"
+
+
+---
+import VisitProjectButton from "../../components/VisitProjectButton.astro";
+
+Dette prosjektet kom fra et behov for å oversette flere sider i et emne i læringsplattformen fra norsk til engelsk. Løsningen ble å bruke en KI modell fra Hugging Face for å oversette teksten, og deretter bruke Canvas LMS API for å oppdatere sidene. Det ble laget et script i Tampermonkey som henter innholdet fra sidene, og så sender det til en Express server hvor selve oversettingen foregår. Resultatet sendes så tilbake til brukerscriptet som bruker læringsplattformens API for å oppdatere sidene igjen.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GwaHlF9bYw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
