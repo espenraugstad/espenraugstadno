@@ -4,57 +4,56 @@ import Nav from "../components/Nav.astro";
 import Lorem from "../components/Lorem.astro";
 import Image from "astro/components/Image.astro";
 import profilbilde from "../assets/profilbilde.jpg";
+import amberme from "../assets/amber_me.png";
 ---
 
 <Layout>
 	<Nav active="home" />
-	<section class="min-h-(--screen-height-with-nav) bg-red-200">
+	<section class="flex flex-col min-h-(--screen-height-with-nav)">
 		<section
-			class="max-w-sm md:max-w-xl mx-auto flex flex-col items-center pt-8"
+			class="max-w-sm md:max-w-4xl mx-auto flex md:flex-row flex-col items-center pt-8 px-8"
 		>
-			<h1 id="home" class="text-4xl font-extrabold">Espen Raugstad</h1>
-			<Image
-				src={profilbilde}
+			<img
+				src="./amber_me.png"
+				alt="Profilbilde av Espen Raugstad"
+				width="128"
+				class="my-4 w-1/2"
+			/>
+			<div>
+				<div class="md:max-w-xl md:ml-8 max-w-sm">
+					<h1 id="home" class="text-4xl font-extrabold mb-4">
+						Espen Raugstad
+					</h1>
+					<!-- 			<Image
+				src={amberme}
 				alt="Profile image of Espen Raugstad"
 				width="128"
-				height="128"
-				class="rounded-full my-4"
-			/>
+				class="my-4"
+			/> -->
+
+					<p>
+						Jeg er en webutvikler med en unik bakgrunn fra teoretisk
+						fysikk, pedagogikk og læringsdesign. Med min erfaring i
+						å løse komplekse problemer og formidle tekniske
+						konsepter, er jeg alltid på jakt etter nye utfordringer
+						der jeg kan bygge brukervennlige og tilgjengelige
+						løsninger.
+					</p>
+				</div>
+			</div>
 		</section>
 
-		<section class="max-w-sm md:max-w-xl mx-auto px-4 flex flex-col pt-8">
-			<h3 class="text-xl font-bold my-2">Developer</h3>
-			<p>
-				Web developer with a diverse background from physics, education,
-				learning design and technology.
-			</p>
-
-			<h3 class="text-xl font-bold my-2">Physicist</h3>
-			<p>
-				With a master's degree in theoretical physics, I have experience
-				dealing with complex problems.
-			</p>
-			<h3 class="text-xl font-bold my-2">Teacher</h3>
-			<p>
-				Having taught high school math and physics for many years, I'm
-				used to explaining technical concepts to non-technical people.
-			</p>
-			<h3 class="text-xl font-bold my-2">Learning designer</h3>
-			<p>
-				With another master's degree in multimedia and educational
-				technology, as well as having worked as an adviser at a
-				university with learning management support and learning design,
-				I’m very familiar with designing for learning and accessibility.
-			</p>
-
-			<a href="#projects">Selected work</a>
-		</section>
+		<div class="h-full flex flex-col grow-1 items-center justify-center">
+			<a href="#projects" class="bg-amber-400 p-4 rounded-xl font-bold mb-8">Utvalgte prosjekt</a>
+			<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
+		</div>
 	</section>
 
 	<section class="max-w-sm mx-4 flex flex-col pt-8">
 		<h2 id="projects" class="text-2xl scroll-m-24 font-bold mb-2">
 			Projects
 		</h2>
+		<Lorem paragraphs={5} />
 	</section>
 </Layout>
 
