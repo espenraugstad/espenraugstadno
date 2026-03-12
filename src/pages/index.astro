@@ -1,11 +1,99 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Lorem from "../components/Lorem.astro";
+import Image from "astro/components/Image.astro";
+import profilbilde from "../assets/profilbilde.jpg";
 ---
 
 <Layout>
-	<Welcome />
+	<Nav active="home" />
+	<section class="min-h-(--screen-height-with-nav) bg-red-200">
+		<section
+			class="max-w-sm md:max-w-xl mx-auto flex flex-col items-center pt-8"
+		>
+			<h1 id="home" class="text-4xl font-extrabold">Espen Raugstad</h1>
+			<Image
+				src={profilbilde}
+				alt="Profile image of Espen Raugstad"
+				width="128"
+				height="128"
+				class="rounded-full my-4"
+			/>
+		</section>
+
+		<section class="max-w-sm md:max-w-xl mx-auto px-4 flex flex-col pt-8">
+			<h3 class="text-xl font-bold my-2">Developer</h3>
+			<p>
+				Web developer with a diverse background from physics, education,
+				learning design and technology.
+			</p>
+
+			<h3 class="text-xl font-bold my-2">Physicist</h3>
+			<p>
+				With a master's degree in theoretical physics, I have experience
+				dealing with complex problems.
+			</p>
+			<h3 class="text-xl font-bold my-2">Teacher</h3>
+			<p>
+				Having taught high school math and physics for many years, I'm
+				used to explaining technical concepts to non-technical people.
+			</p>
+			<h3 class="text-xl font-bold my-2">Learning designer</h3>
+			<p>
+				With another master's degree in multimedia and educational
+				technology, as well as having worked as an adviser at a
+				university with learning management support and learning design,
+				I’m very familiar with designing for learning and accessibility.
+			</p>
+
+			<a href="#projects">Selected work</a>
+		</section>
+	</section>
+
+	<section class="max-w-sm mx-4 flex flex-col pt-8">
+		<h2 id="projects" class="text-2xl scroll-m-24 font-bold mb-2">
+			Projects
+		</h2>
+	</section>
 </Layout>
+
+<script>
+	const observerOptions = {
+		root: null,
+		// Adjust rootMargin to trigger when the element is below your sticky nav
+		rootMargin: "-10% 0px -70% 0px",
+		threshold: 0,
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				const id = entry.target.getAttribute("id");
+				if (id) updateNav(id);
+			}
+		});
+	}, observerOptions);
+
+	// Watch BOTH home and projects sections
+	document.querySelectorAll("h1[id], h2[id]").forEach((section) => {
+		observer.observe(section);
+	});
+
+	function updateNav(id: string) {
+		// 1. Find all nav links
+		const navLinks = document.querySelectorAll("nav a");
+
+		navLinks.forEach((link) => {
+			// 2. Remove active class from everyone
+			if (link.classList.contains("active")) {
+				link.classList.remove("active");
+			}
+			// 3. Add to the one matching the current ID
+			const href = link.getAttribute("href");
+			if (href === `#${id}` || (id === "home" && href === "/")) {
+				link.classList.add("active");
+			}
+		});
+	}
+</script>
