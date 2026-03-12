@@ -1,10 +1,15 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
 import Lorem from "../components/Lorem.astro";
+import Project from "../components/Project.astro";
 import Image from "astro/components/Image.astro";
 import profilbilde from "../assets/profilbilde.jpg";
 import amberme from "../assets/amber_me.png";
+
+const projects = await getCollection("projects");
+console.log(projects);
 ---
 
 <Layout>
@@ -44,16 +49,32 @@ import amberme from "../assets/amber_me.png";
 		</section>
 
 		<div class="h-full flex flex-col grow-1 items-center justify-center">
-			<a href="#projects" class="bg-amber-400 p-4 rounded-xl font-bold mb-8">Utvalgte prosjekt</a>
-			<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
+			<a
+				href="#projects"
+				class="bg-amber-400 p-4 rounded-xl font-bold mb-8"
+				>Utvalgte prosjekt</a
+			>
+			<svg
+				width="24"
+				height="24"
+				xmlns="http://www.w3.org/2000/svg"
+				fill-rule="evenodd"
+				clip-rule="evenodd"
+				><path
+					d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"
+				></path></svg
+			>
 		</div>
 	</section>
 
-	<section class="max-w-sm mx-4 flex flex-col pt-8">
+	<section class="max-w-sm md:max-w-4xl mx-auto flex flex-col pt-8 px-8">
 		<h2 id="projects" class="text-2xl scroll-m-24 font-bold mb-2">
 			Projects
 		</h2>
-		<Lorem paragraphs={5} />
+		<p>A selection of projects. Click their title to read more.</p>
+		<div class="flex flex-col mx-auto gap-6 mt-6 mb-24 w-full">
+			{projects.map((project) => <Project project={project} />)}
+		</div>
 	</section>
 </Layout>
 
