@@ -2,21 +2,17 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
-import Lorem from "../components/Lorem.astro";
 import Project from "../components/Project.astro";
-import Image from "astro/components/Image.astro";
-import profilbilde from "../assets/profilbilde.jpg";
-import amberme from "../assets/amber_me.png";
+
 
 const projects = await getCollection("projects");
-console.log(projects);
 ---
 
-<Layout>
+<Layout title="Espen Raugstad">
 	<Nav active="home" />
 	<section class="flex flex-col min-h-(--screen-height-with-nav)">
 		<section
-			class="max-w-sm md:max-w-4xl mx-auto flex md:flex-row flex-col items-center pt-8 px-8"
+			class="max-w-4xl mx-auto flex md:flex-row flex-col items-center pt-8 px-8"
 		>
 			<img
 				src="./amber_me.png"
@@ -29,12 +25,6 @@ console.log(projects);
 					<h1 id="home" class="text-4xl font-extrabold mb-4">
 						Espen Raugstad
 					</h1>
-					<!-- 			<Image
-				src={amberme}
-				alt="Profile image of Espen Raugstad"
-				width="128"
-				class="my-4"
-			/> -->
 
 					<p>
 						Jeg er en webutvikler med en unik bakgrunn fra teoretisk
@@ -67,7 +57,7 @@ console.log(projects);
 		</div>
 	</section>
 
-	<section class="max-w-sm md:max-w-4xl mx-auto flex flex-col pt-8 px-8">
+	<section class="max-w-4xl mx-auto flex flex-col pt-8 px-8">
 		<h2 id="projects" class="text-2xl scroll-m-24 font-bold mb-2">
 			Projects
 		</h2>
@@ -111,7 +101,8 @@ console.log(projects);
 			}
 			// 3. Add to the one matching the current ID
 			const href = link.getAttribute("href");
-			if (href === `#${id}` || (id === "home" && href === "/")) {
+			console.log(href);
+			if (href === `/#${id}` || (id === "home" && href === "/")) {
 				link.classList.add("active");
 			}
 		});

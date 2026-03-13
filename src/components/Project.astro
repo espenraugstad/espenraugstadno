@@ -24,10 +24,10 @@ const { project } = Astro.props;
     )
   }
   <p>{project.data.description}</p>
-  <ul class="flex gap-2 mt-2">
+  <ul class="flex flex-wrap gap-2 mt-2">
     {
       project.data.technologies.map((tech) => (
-        <li class="bg-blue-400 px-2 py-1 rounded-md text-black">{tech}</li>
+        <li class="bg-blue-400 px-2 py-1 rounded-md text-black text-sm">{tech}</li>
       ))
     }
   </ul>
