@@ -3,5 +3,5 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-    --screen-height-with-nav: calc(100dvh - 96px);
+    --screen-height-with-nav: calc(100svh - 96px);
 }
