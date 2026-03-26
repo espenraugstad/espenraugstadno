@@ -16,5 +16,9 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [mdx()]
+  integrations: [mdx()],
+
+  redirects: {
+    '/kalender': '/calendar',
+  },
 });
